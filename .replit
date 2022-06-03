@@ -1,2 +1,2 @@
 language = "python3"
-run = "python basic/basic_5input.py"
+run = "python basic/basic_6library.py"
