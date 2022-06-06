@@ -1,2 +1,2 @@
 language = "python3"
-run = "python basic/basic_6library.py"
+run = "python Codeup_100/main.py"
