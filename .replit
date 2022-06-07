@@ -1,2 +1,2 @@
 language = "python3"
-run = "python basic/practice1/2.condition.py"
+run = "python 이코테/Example.py"
