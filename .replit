@@ -1,2 +1,2 @@
 language = "python3"
-run = "python 이코테/Example.py"
+run = "python 이코테_chapter/Example.py"
