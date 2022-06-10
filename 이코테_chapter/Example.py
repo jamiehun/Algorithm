@@ -1,24 +1,38 @@
-# n = int(input())
+# 맵의 크기 표시
+n, m = map(int, input().split())
 
-# if n < 3 :
-#   result = 15 * 15 * (n + 1)
-# else :
-#   result = (60 * 60) + (15 * 15 * n)
+# 서있는 위치와 방향 표시
+a, b, d = map(int, input().split())
 
-# print(result)
-# 오답 이유 
-# : 컴퓨팅 사고를 하지 않고 (컴퓨터가 직접 풀게 만들지 않고) 
-#   오히려 내가 경우의 수를 찾아서 컴퓨터에게 심어줄려고 하였음
-# -----------------------------------------
-# 모범 답안
-# h를 입력받기
-h = int(input())
-count = 0
+map_info = []
+visited = [[a, b]]
 
-for i in range(h+1):
-  for j in range(60):
-    for k in range(60):
-      if '3' in str(i) + str(j) + str(k):
-        count += 1
+# 맵의 상태 표시
+for _ in range(n):
+  info = map(int, input().split())
+  map_info += info
 
-print(count)
+# 반 시계 방향으로 돌리기
+direction = [0, 1, 2, 3]
+steps = [[-1, 0], [0, 1], [1, 0], [0, -1]]
+count = 0 # 돌아본 횟수
+
+while True:
+  d = direction[d-1]
+  a += steps[d][0] 
+  b += steps[d][1]
+
+  if [a, b] in visited or map_info[a][b] == 0:
+    a -= steps[d][0]
+    b -= steps[d][1] 
+    count += 1
+  
+    if count == 4 :
+      a -= steps[d][0]
+      b -= steps[d][1]
+      if map_info[a][b] == 0:
+        break
+
+  else: 
+    visited.append([a, b])
+    count = 0 
