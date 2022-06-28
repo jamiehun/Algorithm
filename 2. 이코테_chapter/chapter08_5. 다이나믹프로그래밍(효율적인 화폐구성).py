@@ -19,20 +19,14 @@ array = []
 for i in range(n):
     array.append(int(input()))
 
-print(array) #
-
 # 한번에 계산된 결과를 저장하기 위해 새로운 리스트 저장
 d = [10001] * (m + 1)
-
-print(d) #
 
 # d가 0일때부터 체크하며 array에 있는 리스트 값을 빼내며 확인
 d[0] = 0
 for j in range(n):
     for k in range(array[j], m + 1):
         d[k] = min(d[k], d[k - array[j]] + 1)
-
-print(d) #
 
 if d[m] == 10001:
     print(-1)
