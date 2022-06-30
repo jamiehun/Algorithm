@@ -1,4 +1,5 @@
 # 답
+# 리스트에 저장시켜서 max 값 구하기
 n, m = map(int, input().split())
 result = []
 
