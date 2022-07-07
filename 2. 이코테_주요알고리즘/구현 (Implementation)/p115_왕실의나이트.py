@@ -3,13 +3,13 @@ a = input()
 row = int(a[1])
 col = int(ord(a[0]) - ord("a")) + 1
 
-print(col)
+# print(col)
 
 steps = [[1, 2], [-1, 2], [1, -2], [-1, -2],
          [2, 1], [2, -1], [-2, 1], [-2, -1]]
 
 count = 0 
-b = list()
+# b = list()
 
 for i in steps:
   dx = row
@@ -20,13 +20,13 @@ for i in steps:
   
   if (dx >= 1 and dx <= 8) and (dy >= 1 and dy <= 8):
     count +=1  
-    print(dx)
-    print(dy)
-    print()
-    b.append(i)
+    # print(dx)
+    # print(dy)
+    # print()
+    # b.append(i)
 
 print(count)
-print(b)
+# print(b)
 
 # ---------------------------------------------
 # 모범답안
